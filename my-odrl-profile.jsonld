@@ -1,0 +1,24 @@
+{
+    "@context": {
+      "odrl": "http://www.w3.org/ns/odrl/2/",
+      "example": "http://example.com/odrl-extensions#"
+    },
+    "@id": "http://example.com/my-odrl-profile",
+    "@type": "Profile",
+    "extends": "http://www.w3.org/ns/odrl/2/",
+    "definitions": [
+      {
+        "@id": "example:trigger",
+        "@type": "Action",
+        "label": "Trigger",
+        "comment": "An action to initiate a process or event."
+      },
+      {
+        "@id": "example:activityState",
+        "@type": "Operand",
+        "label": "Activity State",
+        "comment": "The state of a specific activity for conditional evaluation."
+      }
+    ]
+  }
+  
