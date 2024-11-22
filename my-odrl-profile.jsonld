@@ -1,24 +1,47 @@
 {
-    "@context": {
-      "odrl": "http://www.w3.org/ns/odrl/2/",
-      "example": "http://example.com/odrl-extensions#"
+  "@context": {
+    "odrl": "http://www.w3.org/ns/odrl/2/",
+    "example": "http://example.com/odrl-extensions#"
+  },
+  "@id": "http://example.com/my-odrl-profile",
+  "@type": "Profile",
+  "extends": "http://www.w3.org/ns/odrl/2/",
+  "definitions": [
+    {
+      "@id": "example:trigger",
+      "@type": "Action",
+      "label": "Trigger",
+      "comment": "An action to initiate a process or event."
     },
-    "@id": "http://example.com/my-odrl-profile",
-    "@type": "Profile",
-    "extends": "http://www.w3.org/ns/odrl/2/",
-    "definitions": [
-      {
-        "@id": "example:trigger",
-        "@type": "Action",
-        "label": "Trigger",
-        "comment": "An action to initiate a process or event."
-      },
-      {
-        "@id": "example:activityState",
-        "@type": "Operand",
-        "label": "Activity State",
-        "comment": "The state of a specific activity for conditional evaluation."
-      }
-    ]
-  }
-  
+    {
+      "@id": "example:activityState",
+      "@type": "Operand",
+      "label": "Activity State",
+      "comment": "The state of a specific activity for conditional evaluation."
+    },
+    {
+      "@id": "example:OrGateway",
+      "@type": "Constraint",
+      "label": "OR Gateway",
+      "comment": "Logical OR to combine policy rules, allowing any one condition to be true."
+    },
+    {
+      "@id": "example:XorGateway",
+      "@type": "Constraint",
+      "label": "XOR Gateway",
+      "comment": "Logical XOR to ensure only one condition is true at a time."
+    },
+    {
+      "@id": "example:messagePassing",
+      "@type": "Action",
+      "label": "Message Passing",
+      "comment": "An action to communicate between different entities or components."
+    },
+    {
+      "@id": "example:AndGateway",
+      "@type": "Constraint",
+      "label": "AND Gateway",
+      "comment": "Logical AND to combine policy rules, requiring all conditions to be true."
+    }
+  ]
+}
